@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elshad & Sevda — Wedding Invitation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blush: '#F9F3F0',
+                        roseGold: '#C5A880',
+                        roseGoldHover: '#B2936A',
+                        charcoal: '#2C2A29',
+                        softCream: '#FAF7F5',
+                        warmGray: '#76726D'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FAF7F5;
+            color: #2C2A29;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: '"Cormorant Garamond"', serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(44, 42, 41, 0.4), rgba(44, 42, 41, 0.4)), url('https://placehold.co/1920x1080/2C2A29/C5A880?text=Elshad+%26+Sevda');
+            background-size: cover;
+            background-position: center;
+        }
+        .gold-border {
+            border: 1px solid #C5A880;
+        }
+    </style>
+</head>
+<body class="bg-softCream text-charcoal antialiased selection:bg-roseGold selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-softCream/90 backdrop-blur-md border-b border-roseGold/20 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="font-serif text-2xl md:text-3xl tracking-wider text-charcoal hover:text-roseGold transition-colors">
+                E & S
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+                <a href="#story" class="hover:text-roseGold transition-colors">Our Story</a>
+                <a href="#events" class="hover:text-roseGold transition-colors">Events</a>
+                <a href="#details" class="hover:text-roseGold transition-colors">Details</a>
+                <a href="#registry" class="hover:text-roseGold transition-colors">Registry</a>
+                <a href="#rsvp" class="hover:text-roseGold transition-colors font-semibold text-roseGold">RSVP</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-charcoal focus:outline-none text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-softCream border-b border-roseGold/20 px-6 py-4 space-y-3 text-sm uppercase tracking-widest">
+            <a href="#story" class="block hover:text-roseGold transition-colors">Our Story</a>
+            <a href="#events" class="block hover:text-roseGold transition-colors">Events</a>
+            <a href="#details" class="block hover:text-roseGold transition-colors">Details</a>
+            <a href="#registry" class="block hover:text-roseGold transition-colors">Registry</a>
+            <a href="#rsvp" class="block hover:text-roseGold transition-colors font-semibold text-roseGold">RSVP</a>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-bg min-h-screen flex items-center justify-center text-center text-white px-4 relative pt-20">
+        <div class="max-w-3xl mx-auto space-y-6">
+            <p class="uppercase tracking-[0.3em] text-xs md:text-sm font-medium text-roseGold drop-shadow-md">The Wedding Celebration of</p>
+            <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl font-light tracking-wide drop-shadow-lg">
+                Elshad <span class="font-serif italic text-roseGold">&amp;</span> Sevda
+            </h1>
+            <div class="w-24 h-[1px] bg-roseGold mx-auto my-6"></div>
+            <p class="text-lg md:text-xl font-light tracking-widest uppercase drop-shadow">
+                October 17, 2026 <span class="text-roseGold mx-2">•</span> Baku, Azerbaijan
+            </p>
+            <div class="pt-8">
+                <a href="#rsvp" class="inline-block bg-roseGold hover:bg-roseGoldHover text-white px-8 py-4 rounded-full uppercase tracking-widest text-xs font-semibold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    RSVP Now
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white/80">
+            <a href="#countdown"><i class="fa-solid fa-chevron-down text-xl"></i></a>
+        </div>
+    </section>
+
+    <section id="countdown" class="py-20 bg-blush border-b border-roseGold/10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-3xl md:text-4xl mb-4">Counting Down to Forever</h2>
+            <p class="text-warmGray text-sm uppercase tracking-widest mb-12">Join us as we count down every precious moment</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-roseGold/20">
+                    <span id="days" class="font-serif text-4xl md:text-5xl text-roseGold block font-medium">00</span>
+                    <span class="text-xs uppercase tracking-widest text-warmGray mt-2 block">Days</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-roseGold/20">
+                    <span id="hours" class="font-serif text-4xl md:text-5xl text-roseGold block font-medium">00</span>
+                    <span class="text-xs uppercase tracking-widest text-warmGray mt-2 block">Hours</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-roseGold/20">
+                    <span id="minutes" class="font-serif text-4xl md:text-5xl text-roseGold block font-medium">00</span>
+                    <span class="text-xs uppercase tracking-widest text-warmGray mt-2 block">Minutes</span>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-roseGold/20">
+                    <span id="seconds" class="font-serif text-4xl md:text-5xl text-roseGold block font-medium">00</span>
+                    <span class="text-xs uppercase tracking-widest text-warmGray mt-2 block">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="story" class="py-24 px-6 max-w-5xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <p class="uppercase tracking-[0.2em] text-xs text-roseGold mb-3">How We Met</p>
+            <h2 class="font-serif text-4xl md:text-5xl">Our Love Story</h2>
+            <div class="w-16 h-[1px] bg-roseGold mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-warmGray leading-relaxed">
+                <p class="text-lg font-serif italic text-charcoal">"Some meetings feel less like a first encounter and more like a long-awaited homecoming."</p>
+                <p>It all began on a crisp autumn evening in Baku over shared cups of tea and endless conversations about art, travel, and dreams. What started as a chance meeting quickly blossomed into an inseparable partnership filled with adventure and laughter.</p>
+                <p>After five years of exploring the world together, building a home, and supporting each other's aspirations, Elshad proposed during a sunset by the Caspian Sea. Now, we are overjoyed to begin this next beautiful chapter surrounded by our favorite people.</p>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-4 bg-roseGold/10 rounded-2xl transform rotate-2"></div>
+                <img src="https://placehold.co/600x750/E5D4C0/2C2A29?text=Our+Journey" alt="Couple" class="relative rounded-xl shadow-md w-full object-cover h-[450px]">
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="py-24 bg-blush px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <p class="uppercase tracking-[0.2em] text-xs text-roseGold mb-3">When & Where</p>
+                <h2 class="font-serif text-4xl md:text-5xl">The Wedding Events</h2>
+                <div class="w-16 h-[1px] bg-roseGold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Ceremony Card -->
+                <div class="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-roseGold/20 flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block bg-blush text-roseGold px-3 py-1 rounded-full text-xs uppercase tracking-widest font-semibold mb-6">Ceremony</div>
+                        <h3 class="font-serif text-3xl mb-4">Crystal Hall Baku</h3>
+                        <p class="text-warmGray text-sm mb-6 leading-relaxed">
+                            <i class="fa-solid fa-location-dot text-roseGold mr-2"></i> Neftchilar Avenue, Baku, Azerbaijan
+                        </p>
+                        <p class="text-warmGray text-sm mb-6">
+                            <i class="fa-regular fa-clock text-roseGold mr-2"></i> 3:00 PM — Arrival of Guests<br>
+                            <span class="inline-block mt-1 ml-6">3:30 PM — Ceremony Begins</span>
+                        </p>
+                        <p class="text-charcoal text-sm font-light italic">Our ceremony will take place in this magnificent venue overlooking the beautiful Baku skyline and the Caspian Sea.</p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-roseGold/10">
+                        <a href="https://maps.google.com" target="_blank" class="text-xs uppercase tracking-widest text-roseGold font-semibold hover:underline flex items-center">
+                            View on Map <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Reception Card -->
+                <div class="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-roseGold/20 flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block bg-blush text-roseGold px-3 py-1 rounded-full text-xs uppercase tracking-widest font-semibold mb-6">Reception</div>
+                        <h3 class="font-serif text-3xl mb-4">Fairmont Baku</h3>
+                        <p class="text-warmGray text-sm mb-6 leading-relaxed">
+                            <i class="fa-solid fa-location-dot text-roseGold mr-2"></i> Coastal Boulevard, Baku, Azerbaijan
+                        </p>
+                        <p class="text-warmGray text-sm mb-6">
+                            <i class="fa-regular fa-clock text-roseGold mr-2"></i> 6:00 PM — Cocktail Hour<br>
+                            <span class="inline-block mt-1 ml-6">7:30 PM — Dinner &amp; Dancing</span>
+                        </p>
+                        <p class="text-charcoal text-sm font-light italic">Join us for an evening of gourmet dining, fine wine, live music, and dancing with a view of the Caspian Sea.</p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-roseGold/10">
+                        <a href="https://maps.google.com" target="_blank" class="text-xs uppercase tracking-widest text-roseGold font-semibold hover:underline flex items-center">
+                            View on Map <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="details" class="py-24 px-6 max-w-5xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <p class="uppercase tracking-[0.2em] text-xs text-roseGold mb-3">Important Information</p>
+            <h2 class="font-serif text-4xl md:text-5xl">Guest Details</h2>
+            <div class="w-16 h-[1px] bg-roseGold mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Dress Code -->
+            <div class="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-roseGold/20">
+                <div class="text-roseGold text-3xl mb-4"><i class="fa-solid fa-shirt"></i></div>
+                <h3 class="font-serif text-2xl mb-3">Dress Code</h3>
+                <p class="text-xs uppercase tracking-widest text-roseGold font-semibold mb-4">Formal / Black-Tie Optional</p>
+                <p class="text-warmGray text-sm leading-relaxed mb-4">
+                    We invite our guests to dress in formal attire. For gentlemen, a tuxedo or dark suit with a tie. For ladies, floor-length evening gowns or elegant midi cocktail dresses.
+                </p>
+                <p class="text-charcoal text-sm italic">
+                    Color Palette Inspiration: Soft neutrals, blush tones, champagne, and sage green.
+                </p>
+            </div>
+
+            <!-- Accommodations -->
+            <div class="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-roseGold/20">
+                <div class="text-roseGold text-3xl mb-4"><i class="fa-solid fa-hotel"></i></div>
+                <h3 class="font-serif text-2xl mb-3">Where to Stay</h3>
+                <p class="text-xs uppercase tracking-widest text-roseGold font-semibold mb-4">Room Blocks &amp; Recommendations</p>
+                <p class="text-warmGray text-sm leading-relaxed mb-4">
+                    We have reserved special room blocks at the Fairmont Baku and JW Marriott Baku at discounted rates for our wedding guests. Please mention the "Elshad &amp; Sevda Wedding" when booking.
+                </p>
+                <p class="text-charcoal text-sm font-medium">
+                    Recommended booking deadline: August 15, 2026.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="registry" class="py-24 bg-blush px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="uppercase tracking-[0.2em] text-xs text-roseGold mb-3">With Love &amp; Gratitude</p>
+            <h2 class="font-serif text-4xl md:text-5xl mb-6">Wedding Registry</h2>
+            <div class="w-16 h-[1px] bg-roseGold mx-auto mb-6"></div>
+            <p class="text-warmGray max-w-xl mx-auto text-sm leading-relaxed mb-10">
+                Your presence at our wedding is the greatest gift of all! If you wish to contribute to our honeymoon adventure and our future home, please explore our registry below.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="openRegistryModal('Honeyfund')" class="bg-white hover:bg-roseGold hover:text-white text-charcoal border border-roseGold/40 px-8 py-4 rounded-full uppercase tracking-widest text-xs font-semibold transition-all shadow-sm">
+                    <i class="fa-solid fa-plane-departure mr-2"></i> Honeyfund Registry
+                </button>
+                <button onclick="openRegistryModal('Crate & Barrel')" class="bg-white hover:bg-roseGold hover:text-white text-charcoal border border-roseGold/40 px-8 py-4 rounded-full uppercase tracking-widest text-xs font-semibold transition-all shadow-sm">
+                    <i class="fa-solid fa-gift mr-2"></i> Crate &amp; Barrel
+                </button>
+                <button onclick="openRegistryModal('Zola')" class="bg-white hover:bg-roseGold hover:text-white text-charcoal border border-roseGold/40 px-8 py-4 rounded-full uppercase tracking-widest text-xs font-semibold transition-all shadow-sm">
+                    <i class="fa-solid fa-heart mr-2"></i> Zola Registry
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="rsvp" class="py-24 px-6 max-w-3xl mx-auto">
+        <div class="text-center mb-16">
+            <p class="uppercase tracking-[0.2em] text-xs text-roseGold mb-3">Kindly Respond</p>
+            <h2 class="font-serif text-4xl md:text-5xl">Will You Join Us?</h2>
+            <div class="w-16 h-[1px] bg-roseGold mx-auto mt-4"></div>
+            <p class="text-warmGray text-sm mt-4">Please submit your response by September 1, 2026</p>
+        </div>
+
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-roseGold/20 relative">
+            <form id="rsvp-form" class="space-y-6">
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-warmGray mb-2 font-medium">Full Name(s)</label>
+                    <input type="text" id="guest-name" required placeholder="e.g. Mr. & Mrs. Davis" class="w-full px-4 py-3 bg-blush/50 border border-roseGold/20 rounded-lg focus:outline-none focus:border-roseGold text-sm">
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-warmGray mb-2 font-medium">Email Address</label>
+                        <input type="email" id="guest-email" required placeholder="your@email.com" class="w-full px-4 py-3 bg-blush/50 border border-roseGold/20 rounded-lg focus:outline-none focus:border-roseGold text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-warmGray mb-2 font-medium">Will You Attend?</label>
+                        <select id="attendance" onchange="toggleMealSection()" class="w-full px-4 py-3 bg-blush/50 border border-roseGold/20 rounded-lg focus:outline-none focus:border-roseGold text-sm">
+                            <option value="yes">Joyfully Accept</option>
+                            <option value="no">Regretfully Decline</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="meal-section" class="space-y-6 transition-all duration-300">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-warmGray mb-2 font-medium">Meal Preference</label>
+                        <select id="meal" class="w-full px-4 py-3 bg-blush/50 border border-roseGold/20 rounded-lg focus:outline-none focus:border-roseGold text-sm">
+                            <option value="beef">Pan-Roasted Fillet of Beef with Truffle Sauce</option>
+                            <option value="fish">Wild Sea Bass with Lemon Herb Emulsion</option>
+                            <option value="vegetarian">Wild Mushroom &amp; Truffle Risotto (Vegetarian)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-warmGray mb-2 font-medium">Dietary Restrictions / Allergies</label>
+                        <input type="text" id="dietary" placeholder="e.g. Gluten-free, nut allergy (optional)" class="w-full px-4 py-3 bg-blush/50 border border-roseGold/20 rounded-lg focus:outline-none focus:border-roseGold text-sm">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-warmGray mb-2 font-medium">Message for the Couple</label>
+                    <textarea id="message" rows="3" placeholder="Share your wishes or notes for us..." class="w-full px-4 py-3 bg-blush/50 border border-roseGold/20 rounded-lg focus:outline-none focus:border-roseGold text-sm"></textarea>
+                </div>
+
+                <div class="text-center pt-4">
+                    <button type="submit" class="w-full bg-roseGold hover:bg-roseGoldHover text-white py-4 rounded-full uppercase tracking-widest text-xs font-semibold transition-all shadow-md">
+                        Submit RSVP
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success Message Box (Hidden by default) -->
+            <div id="rsvp-success" class="hidden text-center py-12 space-y-4">
+                <div class="w-16 h-16 bg-roseGold/10 text-roseGold rounded-full flex items-center justify-center mx-auto text-2xl">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3 class="font-serif text-3xl text-charcoal">Thank You, <span id="confirmed-name">Guest</span>!</h3>
+                <p id="confirmation-text" class="text-warmGray max-w-md mx-auto text-sm leading-relaxed">
+                    We have successfully recorded your response. We cannot wait to celebrate this special day with you!
+                </p>
+                <div class="pt-6">
+                    <button onclick="resetRsvpForm()" class="text-xs uppercase tracking-widest text-roseGold font-semibold hover:underline">
+                        Submit another response
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-charcoal text-white py-16 px-6 text-center">
+        <div class="max-w-2xl mx-auto space-y-6">
+            <h2 class="font-serif text-4xl tracking-wider">Elshad &amp; Sevda</h2>
+            <div class="w-12 h-[1px] bg-roseGold mx-auto"></div>
+            <p class="text-white/60 text-xs uppercase tracking-widest">October 17, 2026 • Baku, Azerbaijan</p>
+            <p class="text-white/40 text-xs pt-8">With love and excitement for the journey ahead.</p>
+        </div>
+    </footer>
+
+    <div id="registry-modal" class="fixed inset-0 bg-charcoal/60 backdrop-blur-sm z-50 flex items-center justify-center hidden px-4">
+        <div class="bg-white max-w-md w-full p-8 rounded-2xl shadow-xl relative border border-roseGold/20">
+            <button onclick="closeRegistryModal()" class="absolute top-4 right-4 text-warmGray hover:text-charcoal">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="text-center space-y-4">
+                <div class="text-roseGold text-4xl mb-2"><i class="fa-solid fa-gift"></i></div>
+                <h3 id="modal-title" class="font-serif text-2xl">Registry Link</h3>
+                <p class="text-warmGray text-sm leading-relaxed">
+                    You are being redirected to our secure external registry partner. Thank you so much for your generous gift!
+                </p>
+                <div class="pt-4">
+                    <a id="modal-link" href="#" target="_blank" class="inline-block bg-roseGold hover:bg-roseGoldHover text-white px-8 py-3 rounded-full uppercase tracking-widest text-xs font-semibold transition-all">
+                        Proceed to Registry
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Countdown Timer Logic (Target: Oct 17, 2026 15:00:00)
+        const weddingDate = new Date('October 17, 2026 15:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                document.getElementById('days').innerText = '00';
+                document.getElementById('hours').innerText = '00';
+                document.getElementById('minutes').innerText = '00';
+                document.getElementById('seconds').innerText = '00';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Toggle meal options based on attendance
+        function toggleMealSection() {
+            const attendance = document.getElementById('attendance').value;
+            const mealSection = document.getElementById('meal-section');
+            if (attendance === 'no') {
+                mealSection.style.opacity = '0.3';
+                mealSection.style.pointerEvents = 'none';
+            } else {
+                mealSection.style.opacity = '1';
+                mealSection.style.pointerEvents = 'auto';
+            }
+        }
+
+        // RSVP Form Submission Handler
+        const rsvpForm = document.getElementById('rsvp-form');
+        const rsvpSuccess = document.getElementById('rsvp-success');
+        const confirmedName = document.getElementById('confirmed-name');
+        const confirmationText = document.getElementById('confirmation-text');
+
+        rsvpForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('guest-name').value;
+            const attendance = document.getElementById('attendance').value;
+
+            confirmedName.innerText = name;
+            if (attendance === 'yes') {
+                confirmationText.innerText = "We have successfully recorded your joyful acceptance. We cannot wait to celebrate this special day with you in Baku!";
+            } else {
+                confirmationText.innerText = "We have received your response. While we will miss you dearly, thank you for letting us know!";
+            }
+
+            rsvpForm.classList.add('hidden');
+            rsvpSuccess.classList.remove('hidden');
+        });
+
+        function resetRsvpForm() {
+            rsvpForm.reset();
+            rsvpSuccess.classList.add('hidden');
+            rsvpForm.classList.remove('hidden');
+            toggleMealSection();
+        }
+
+        // Registry Modal Handling
+        function openRegistryModal(registryName) {
+            const modal = document.getElementById('registry-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalLink = document.getElementById('modal-link');
+
+            modalTitle.innerText = registryName + ' Registry';
+
+            const registryLinks = {
+                'Honeyfund': 'https://www.honeyfund.com',
+                'Crate & Barrel': 'https://www.crateandbarrel.com',
+                'Zola': 'https://www.zola.com'
+            };
+
+            modalLink.href = registryLinks[registryName] || '#';
+            modal.classList.remove('hidden');
+        }
+
+        function closeRegistryModal() {
+            const modal = document.getElementById('registry-modal');
+            modal.classList.add('hidden');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('registry-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'registry-modal') {
+                closeRegistryModal();
+            }
+        });
+    </script>
+</body>
+</html>
