@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP Responses - Elshad & Sevda Wedding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FAF7F5;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-6">
+    <div class="max-w-6xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="mb-8">
+                <h1 class="text-4xl font-bold text-gray-800 mb-2">RSVP Responses Dashboard</h1>
+                <p class="text-gray-600">Elshad & Sevda Wedding • October 17, 2026 • Baku, Azerbaijan</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-green-50 border-2 border-green-200 rounded-lg p-6">
+                    <div class="text-3xl font-bold text-green-600" id="accepted-count">0</div>
+                    <p class="text-gray-600 mt-2"><i class="fas fa-check-circle text-green-500 mr-2"></i>Accepted</p>
+                </div>
+                <div class="bg-red-50 border-2 border-red-200 rounded-lg p-6">
+                    <div class="text-3xl font-bold text-red-600" id="declined-count">0</div>
+                    <p class="text-gray-600 mt-2"><i class="fas fa-times-circle text-red-500 mr-2"></i>Declined</p>
+                </div>
+                <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-6">
+                    <div class="text-3xl font-bold text-blue-600" id="total-count">0</div>
+                    <p class="text-gray-600 mt-2"><i class="fas fa-users text-blue-500 mr-2"></i>Total Responses</p>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">All Responses</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="bg-gray-200">
+                                <th class="border p-3 text-left">Name</th>
+                                <th class="border p-3 text-left">Email</th>
+                                <th class="border p-3 text-center">Status</th>
+                                <th class="border p-3 text-left">Meal Choice</th>
+                                <th class="border p-3 text-left">Dietary Restrictions</th>
+                                <th class="border p-3 text-left">Message</th>
+                            </tr>
+                        </thead>
+                        <tbody id="responses-table">
+                            <tr>
+                                <td colspan="6" class="border p-4 text-center text-gray-500">No responses yet.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                <p class="text-blue-800 font-semibold mb-2">💾 Notes</p>
+                <ul class="text-blue-700 text-sm space-y-1">
+                    <li>Responses are stored in the current browser's local storage.</li>
+                    <li>Open this page on the same device/browser to view saved RSVP data.</li>
+                    <li>Use the invitation link and monitor the dashboard after each RSVP.</li>
+                </ul>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="index.html" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+                    ← Back to Invitation
+                </a>
+                <button onclick="clearAllResponses()" class="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition ml-4">
+                    🗑️ Clear All Data
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadResponses() {
+            const responses = JSON.parse(localStorage.getItem('rsvpResponses')) || [];
+            const tableBody = document.getElementById('responses-table');
+
+            document.getElementById('accepted-count').innerText = responses.filter(r => r.attendance === 'yes').length;
+            document.getElementById('declined-count').innerText = responses.filter(r => r.attendance === 'no').length;
+            document.getElementById('total-count').innerText = responses.length;
+
+            if (responses.length === 0) {
+                tableBody.innerHTML = `
+                    <tr>
+                        <td colspan="6" class="border p-4 text-center text-gray-500">No responses yet.</td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tableBody.innerHTML = responses.map(r => `
+                <tr class="${r.attendance === 'yes' ? 'bg-green-50' : 'bg-red-50'}">
+                    <td class="border p-3 font-semibold">${r.name}</td>
+                    <td class="border p-3">${r.email}</td>
+                    <td class="border p-3 text-center">
+                        ${r.attendance === 'yes' ? '<span class="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">✅ Accepted</span>' : '<span class="bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">❌ Declined</span>'}
+                    </td>
+                    <td class="border p-3">${r.meal || '-'}</td>
+                    <td class="border p-3">${r.dietary || '-'}</td>
+                    <td class="border p-3 text-sm italic">${r.message || '-'}</td>
+                </tr>
+            `).join('');
+        }
+
+        function clearAllResponses() {
+            if (confirm('Are you sure you want to delete all RSVP responses?')) {
+                localStorage.removeItem('rsvpResponses');
+                loadResponses();
+            }
+        }
+
+        loadResponses();
+        setInterval(loadResponses, 3000);
+    </script>
+</body>
+</html>
